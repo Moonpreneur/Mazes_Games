@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Maze Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="logo">
+    <img src="website-logo.png" alt="website-logo">
+  </div>
+  <div id="gradient"></div>
+  <div id="page">
+    <div id="menu">
+      <div id="title-bar"></div>
+        <h1>Maze Game</h1>
+      
+      <div class="game-option">
+        <span>Easy</span>
+        <button class="start-btn" onclick="startGame('easy')">Start Game</button>
+      </div>
+
+      <div class="game-option">
+        <span>Medium</span>
+        <button class="start-btn" onclick="startGame('medium')">Start Game</button>
+      </div>
+
+      <div class="game-option">
+        <span>Hard</span>
+        <button class="start-btn" onclick="startGame('hard')">Start Game</button>
+      </div>
+
+      <div class="game-option">
+        <span>Extreme</span>
+        <button class="start-btn" onclick="startGame('extreme')">Start Game</button>
+      </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+      <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+    </div>
+  </div>
+
+  <div id="movesDisplay" style="position: absolute; top: 10px; left: 10px; padding: 10px; font-size: 20px; color: #ffffff; display: none;">
+    Moves: 0
+  </div>
+ 
+  <div id="gameOverContainer" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); padding: 50px; color: #ffffff; font-size: 24px; text-align: center;">
+    <h2>Congratulations!😄😄😄</h2>
+    <p id="gameOverMessage"></p>
+  </div>
+
+  <div id="zoom-controls" style="position: absolute; bottom: 10px; right: 10px; display: flex; gap: 10px;bottom: 500px;">
+    <button onclick="adjustZoom(10)">+</button>
+    <button onclick="adjustZoom(-10)">-</button>
+    <div id="zoom-indicator" style="padding: 5px 10px; font-size: 18px; color: #ffffff; border-radius: 5px;">
+      67%
+    </div>
+  </div>
+  
+  
+
+   <div id="speaker" style="position: absolute; bottom: 500px; left: 50px; cursor: pointer; display: none;">
+    <img id="speakerIcon" src="speaker.png" alt="Speaker" width="50" height="50">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
